@@ -30,23 +30,23 @@ TextCleaner automates these operations through a simple and efficient command-li
 Run the program from a Linux terminal.
 
 Display help information:
+
 ```bash
 ./textcleaner --help
 Remove empty lines from a file:
 
+bash
+Copy code
 ./textcleaner remove-empty input.txt
 Filter lines containing a specific word:
 
+bash
+Copy code
 ./textcleaner only keyword input.txt
-
-
-
-
-
 Download
 Precompiled Linux binaries are available on the project website:
 
- https://jeffery-twumasi.github.io/textcleaner/
+👉 https://jeffery-twumasi.github.io/textcleaner/
 
 Available platforms:
 
@@ -65,13 +65,9 @@ Automated cross-compilation for multiple architectures
 
 Static binaries hosted on GitHub Pages
 
-
-
-
-
-
 Project Structure
-
+text
+Copy code
 .
 ├── src/
 │   └── main.rs
@@ -84,9 +80,5 @@ Project Structure
 │       └── main.yml
 ├── Cargo.toml
 └── README.md
-
-
-
-
 Author
 Created by Jeffery Twumasi
