@@ -7,99 +7,113 @@
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #eef1f4;
       margin: 0;
       padding: 0;
+      background-color: #eef2f5;
+      color: #333;
     }
 
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0px auto;
-      background: white;
-      padding: 30px 80px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-       text-align: left;
+    header {
+      background-color: #2c7be5;
+      color: white;
+      padding: 40px 60px;
     }
 
-    h1 { 
-        text-align: center;
-      color: #2c3e50;
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      max-width: 900px;
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    main {
+      padding: 60px;
+      max-width: 1000px;
     }
 
     h2 {
-        text-align: center;
-         font-size: 2.5em;
-      color: #34495e;
       margin-top: 50px;
+      color: #2c3e50;
     }
 
     p {
       line-height: 1.6;
-      color: #444;
+      max-width: 900px;
     }
 
     ul {
-        text-align: center;
-      list-style: none;
-      padding: 0;
+      padding-left: 20px;
     }
 
     li {
-      margin-bottom: 15px;
+      margin-bottom: 8px;
     }
 
-    a.download {
+    pre {
+      background-color: #f4f6f8;
+      padding: 15px;
+      overflow-x: auto;
+    }
+
+    .download-section a {
       display: inline-block;
+      margin-right: 15px;
+      margin-top: 10px;
       padding: 12px 20px;
       background-color: #2c7be5;
-      color: black;
+      color: white;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 5px;
       font-weight: bold;
     }
 
-    a.download:hover {
+    .download-section a:hover {
       background-color: #1a5dcc;
     }
 
     footer {
-      margin-top: 40px;
+      margin-top: 80px;
+      padding: 30px 60px;
+      background-color: #f4f6f8;
       font-size: 0.9em;
-      color: #777;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
-
+  <header>
     <h1>TextCleaner</h1>
-
     <p>
-      TextCleaner is a command-line tool written in Rust that helps developers
+      A lightweight command-line tool written in Rust that helps developers
       quickly clean and filter text files such as logs.
     </p>
+  </header>
+
+  <main>
 
     <h2>Problem</h2>
     <p>
       Developers often waste time manually scanning large log or text files
-      to remove empty lines or find relevant entries.
+      to remove empty lines or locate relevant entries.
     </p>
 
     <h2>Solution</h2>
     <p>
-      TextCleaner automates this process by providing a fast and simple CLI tool
-      that filters text files based on user-defined options.
+      TextCleaner automates this process with a fast and simple command-line
+      interface that filters text files based on user-defined options.
     </p>
 
     <h2>Features</h2>
     <ul>
       <li>Remove empty lines</li>
       <li>Filter lines by keyword</li>
-      <li>Fast and portable (single binary)</li>
+      <li>Fast execution with a single binary</li>
+      <li>No dependencies required</li>
     </ul>
 
     <h2>Usage</h2>
@@ -110,43 +124,27 @@ textcleaner input.txt --remove-empty --only ERROR
     </code></pre>
 
     <h2>Marketing & Pricing</h2>
-
     <p>
-      TextCleaner is designed for developers, students, and technical users who
-      work with text files and want to automate repetitive text-editing tasks.
+      TextCleaner targets developers, students, and technical users who work
+      with raw text files and want to automate repetitive tasks.
     </p>
-
     <p>
-      The tool is promoted through open-source platforms such as GitHub and
-      developer communities, allowing users to easily discover, test, and
-      integrate it into their workflows.
-    </p>
-
-    <p>
-      TextCleaner follows a freemium pricing model. The basic version is available
-      for free, while advanced features could be offered as a paid upgrade or
-      one-time license in the future.
+      The tool is distributed via GitHub and open-source communities to attract
+      users organically. It follows a freemium model: the core functionality
+      is free, with potential paid advanced features in the future.
     </p>
 
     <h2>Download</h2>
-    <ul>
-      <li>
-        <a href="textcleaner-aarch64" class="download" download>
-          Linux (aarch64)
-        </a>
-      </li>
-      <li>
-        <a href="textcleaner-x86_64" class="download" download>
-          Linux (x86_64)
-        </a>
-      </li>
-    </ul>
+    <div class="download-section">
+      <a href="textcleaner-aarch64" download>Linux (aarch64)</a>
+      <a href="textcleaner-x86_64" download>Linux (x86_64)</a>
+    </div>
 
-    <footer>
-      <p>Created by Jeffery Twumasi</p>
-    </footer>
+  </main>
 
-  </div>
+  <footer>
+    Created by Jeffery Twumasi — Digital Business Project
+  </footer>
 
 </body>
 </html>
