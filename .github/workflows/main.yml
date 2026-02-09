@@ -2,7 +2,8 @@ name: Build
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -20,12 +21,11 @@ jobs:
       - name: Install cross compiler
         run: sudo apt-get update && sudo apt-get install -y gcc-aarch64-linux-gnu
 
-       - name: Build aarch64 binary
+      - name: Build aarch64 binary
         env:
           CC_aarch64_unknown_linux_gnu: aarch64-linux-gnu-gcc
           CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER: aarch64-linux-gnu-gcc
         run: cargo build --release --target aarch64-unknown-linux-gnu
-
 
       - name: Upload aarch64 binary
         uses: actions/upload-artifact@v4
