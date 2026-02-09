@@ -1,0 +1,10 @@
+
+
+INFO Application started
+
+ERROR Failed to connect to database
+
+WARN Retrying connection
+
+ERROR Timeout occurred
+
