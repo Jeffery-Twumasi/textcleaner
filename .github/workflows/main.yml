@@ -1,3 +1,4 @@
+
 name: Build
 
 on:
@@ -16,11 +17,14 @@ jobs:
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
         with:
-          targets: aarch64-unknown-linux-gnu
+          targets: |
+            aarch64-unknown-linux-gnu
+            x86_64-unknown-linux-gnu
 
-      - name: Install cross compiler
+      - name: Install cross compiler for aarch64
         run: sudo apt-get update && sudo apt-get install -y gcc-aarch64-linux-gnu
 
+      # ----- aarch64 build -----
       - name: Build aarch64 binary
         env:
           CC_aarch64_unknown_linux_gnu: aarch64-linux-gnu-gcc
@@ -30,6 +34,15 @@ jobs:
       - name: Upload aarch64 binary
         uses: actions/upload-artifact@v4
         with:
-          name: textcleaner-aarch64
+          name: textcleaner-linux-aarch64
           path: target/aarch64-unknown-linux-gnu/release/textcleaner
 
+      # ----- x86_64 build (BONUS) -----
+      - name: Build x86_64 binary
+        run: cargo build --release --target x86_64-unknown-linux-gnu
+
+      - name: Upload x86_64 binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: textcleaner-linux-x86_64
+          path: target/x86_64-unknown-linux-gnu/release/textcleaner
