@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TextCleaner CLI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 4px 6px;
+      border-radius: 4px;
+    }
+    .download {
+      background: #2c3e50;
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>TextCleaner</h1>
+  <p>
+    TextCleaner is a command-line tool written in Rust that helps developers
+    quickly clean and filter text files such as logs.
+  </p>
+
+  <h2>Problem</h2>
+  <p>
+    Developers often waste time manually scanning large log or text files
+    to remove empty lines or find relevant entries.
+  </p>
+
+  <h2>Solution</h2>
+  <p>
+    TextCleaner automates this process by providing a fast and simple CLI tool
+    that filters text files based on user-defined options.
+  </p>
+
+  <h2>Features</h2>
+  <ul>
+    <li>Remove empty lines</li>
+    <li>Filter lines by keyword</li>
+    <li>Fast and portable (single binary)</li>
+  </ul>
+
+  <h2>Usage</h2>
+  <pre><code>
+textcleaner input.txt --remove-empty
+textcleaner input.txt --only ERROR
+textcleaner input.txt --remove-empty --only ERROR
+  </code></pre>
+
+  <h2>Download</h2>
+  <p>
+    Download the Linux aarch64 binary:
+  </p>
+  <a class="download" href="textcleaner-aarch64" download>
+    Download TextCleaner (aarch64)
+  </a>
+
+  <h2>Author</h2>
+  <p>
+    Created by Jephery Skipper
+  </p>
+
+</body>
+</html>
